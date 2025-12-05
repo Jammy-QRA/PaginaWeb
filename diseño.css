@@ -349,40 +349,53 @@ nav a {
 }
 
 /* Celulares */
-@media (max-width: 600px) {
-  header {
+/* Menú normal en escritorio */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b4f3f;
+}
+
+/* Responsivo: en móviles con menu burger xd */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* ocultar menú por defecto */
     flex-direction: column;
-    align-items: flex-start;
+    background-color: #f8e8df;
+    position: absolute;
+    top: 70px; /* debajo del header */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(75,63,47,0.1);
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
   }
 
-  .btn-login {
-    margin-top: 10px;
+  .hamburger {
+    display: block; /* mostrar botón en cel */
   }
 
-  .hero {
-    flex-direction: column;
-    padding: 20px;
+  nav.active {
+    display: flex; /* mostrar menú cuando se activa */
   }
+}
 
-  .hero .texto h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero .texto h3 {
-    font-size: 1.2rem;
-  }
-
-  .grid-categorias,
-  .grid-proyectos {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .categoria,
   .proyecto {
@@ -400,7 +413,7 @@ nav a {
     flex: none;
     width: 100%;
   }
-}
+
 
 
 /*sobre nosotros*/
