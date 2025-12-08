@@ -31,18 +31,109 @@
 </header>
   </header>
 
+ <main>
+  <h2> Seccion de costura y tejido</h2>
+  
   <section class="grid-proyectos">
-    <div class="proyecto">
-      <img src="bufanda.jpg" alt="Bufanda tejida">
-      <h3>Bufanda Tejida a Crochet</h3>
-     
+
+  <!-- Proyecto 1 -->
+  <div class="proyecto">
+    <img src="costura1img.png" alt="cerezas ">
+    <a href="#" class="btn-categoria" onclick="abrirVideo1()">Ver tutorial</a>
+    <h3>Cerezas tipo llavero</h3>
+  </div>
+  <div id="modalVideo1" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo1()">&times;</span>
+      <video controls>
+        <source src="costura1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
     </div>
-    <div class="proyecto">
-      <img src="cojin.jpg" alt="Cojín bordado">
-      <h3>Cojín Bordado a Mano</h3>
-      <p>Tiempo: 2 horas | Nivel: Principiante</p>
+  </div>
+
+  <!-- Proyecto 2 -->
+  <div class="proyecto">
+    <img src="costura2img.png" alt="pulseras">
+    <a href="#" class="btn-categoria" onclick="abrirVideo2()">Ver tutorial</a>
+    <h3>Pulseras estilo daisy</h3>
+  </div>
+  <div id="modalVideo2" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo2()">&times;</span>
+      <video controls>
+        <source src="costura2.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
     </div>
-  </section>
+  </div>
+
+  <!-- Proyecto 3 -->
+  <div class="proyecto">
+    <img src="costura3img.png" alt="Caja decorativa">
+    <a href="#" class="btn-categoria" onclick="abrirVideo3()">Ver tutorial</a>
+    <h3>Estrellas de lana</h3>
+  </div>
+  <div id="modalVideo3" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo3()">&times;</span>
+      <video controls>
+        <source src="costura3.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 4 -->
+  <div class="proyecto">
+    <img src="costura4.png" alt="Manualidad 4">
+    <a href="#" class="btn-categoria" onclick="abrirVideo4()">Ver tutorial</a>
+    <h3>llavero de capibara  </h3>
+  </div>
+  <div id="modalVideo4" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo4()">&times;</span>
+      <video controls>
+        <source src="costura4.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 5 -->
+  <div class="proyecto">
+    <img src="costura5img.png" alt="Manualidad 5">
+    <a href="#" class="btn-categoria" onclick="abrirVideo5()">Ver tutorial</a>
+    <h3>pulsera de flores </h3>
+  </div>
+  <div id="modalVideo5" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo5()">&times;</span>
+      <video controls>
+        <source src="costura5.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 6 -->
+  <div class="proyecto">
+    <img src="Corazones de lana.jpeg" alt="Manualidad 6">
+    <a href="#" class="btn-categoria" onclick="abrirVideo6()">Ver tutorial</a>
+    <h3>corazon de lana  </h3>
+  </div>
+  <div id="modalVideo6" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo6()">&times;</span>
+      <video controls>
+        <source src="corazones con lana.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+</section>
+ </main>
 
   <footer>
    <footer class="footer">
@@ -81,5 +172,6 @@
   </div>
 </footer>
   </footer>
+  <script src="logica.js"></script>
 </body>
 </html>

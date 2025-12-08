@@ -506,7 +506,7 @@ nav ul {
 /* Sección Sobre Nosotros */
 .sobre-nosotros {
   padding: 40px 30px;
-  background-color: #fffaf4; /* mismo beige que el hero */
+  background-color: #e8d4bc; /* mismo beige que el hero */
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 12px;
@@ -535,7 +535,7 @@ nav ul {
 
 .sobre-nosotros .subseccion h3 {
   font-size: 1.4rem;
-  color: #d88c9a; /* rosa consistente */
+  color: #d97688; /* rosa consistente */
   margin-bottom: 10px;
 }
 
