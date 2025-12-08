@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'FuenteEspecial';
+  src: url('swirly_canalope/fuente2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Botón Login */
 .btn-login {
   padding: 8px 16px;
@@ -17,13 +24,14 @@
 /* Tipografía base */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'FuenteEspecial', sans-serif;
   background-color: #f5f0e6;
   color: #4b3f2f;
   padding-top: 90px;
 }
 
 header {
+   font-family: 'FuenteEspecial', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,14 +107,18 @@ nav a {
 }
 
 .hero .texto h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+ 
   color: #a97155;
   margin-bottom: 20px;
+  font-family: 'FuenteEspecial', sans-serif;
 }
 
 .hero .texto h3 {
-  font-size: 1.5rem;
+   
+  font-size: 2.5rem;
   color: #d88c9a;
+  font-family: 'FuenteEspecial', sans-serif;
 }
 
 .hero .imagen img {
@@ -116,15 +128,43 @@ nav a {
   border-radius: 10px;
 }
 
+
+/* Animaciones agregadas */
+
+.hero .imagen img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero .imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero .texto h1,
+.hero .texto h3 {
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.hero .texto h1:hover,
+.hero .texto h3:hover {
+  color: #ffb6c1; 
+  transform: translateY(-3px);
+}
+
 /* Sección de categorías */
 .categorias {
   padding: 40px 30px;
   background-color: #fef3e7;
   text-align: center;
+  font-family: 'FuenteEspecial', sans-serif;
+   font-size: 2rem;
+  
 }
 
 .categorias h2 {
+   font-family: 'FuenteEspecial', sans-serif;
   color: #a97155;
+   font-size: 3.2rem;
 }
 
 .grid-categorias {
@@ -136,7 +176,9 @@ nav a {
 }
 
 .categoria {
-  background-color: #fff;
+   font-family: 'FuenteEspecial', sans-serif;
+   font-size: 1.2rem;
+  background-color: #f2eded;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(75, 63, 47, 0.1);
   overflow: hidden;
@@ -151,10 +193,14 @@ nav a {
 }
 
 .categoria .info {
+ 
   padding: 15px;
+  
 }
 
 .btn-categoria {
+
+  
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
@@ -171,8 +217,10 @@ nav a {
 
 /* Sección de destacados */
 .destacados {
+  font-family: 'FuenteEspecial', sans-serif;
   padding: 40px 30px;
   background-color: #f8e8df;
+   font-size: 1.5rem;
 }
 
 .destacados .encabezado {
@@ -181,7 +229,7 @@ nav a {
   align-items: center;
 }
 
-.destacados h2 {
+.destacados h2 { 
   color: #a97155;
 }
 
@@ -194,6 +242,7 @@ nav a {
 }
 
 .proyecto {
+  font-family: 'FuenteEspecial', sans-serif;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(75, 63, 47, 0.1);
@@ -212,7 +261,7 @@ nav a {
 
 .proyecto h3 {
   color: #6b4f3f;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* Footer */
@@ -238,10 +287,14 @@ nav a {
 
 .footer h3,
 .footer h4 {
+   font-family: 'FuenteEspecial', sans-serif;
   color: #fc91c9;
+  font-size: 1.5rem;
 }
 
 .footer p {
+   font-family: 'FuenteEspecial', sans-serif;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: #fdfafa;
 }
@@ -253,6 +306,8 @@ nav a {
 
 .footer ul li {
   margin-bottom: 0.5rem;
+   font-family: 'FuenteEspecial', sans-serif;
+   font-size: 1.2rem;
 }
 
 .footer ul li a {
@@ -764,6 +819,7 @@ body {
   color: #6b4f3f;
 }
 
+
 /* ====== Sección Categorías ====== */
 .categorias {
   padding: 40px;
@@ -909,4 +965,16 @@ body {
     height: 40px;
   }
 }
+
+/*videos de tutorial*/
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 

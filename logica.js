@@ -68,3 +68,4 @@
       // Aquí podrías guardar datos en localStorage o enviarlos a un backend en el futuro
       // localStorage.setItem("usuario", JSON.stringify({nombre, email}));
     });
+
