@@ -1,10 +1,12 @@
 //menu hamburguesa 
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav ul");
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+// Evento al hacer clic en el botón
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active"); // alterna la clase "active"
+});
+
 
 
 
@@ -18,7 +20,7 @@
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
 
-      // Validación básica
+      // Validación básica para que no se deje espacios en blanco 
       if (email === "" || password === "") {
         mensaje.textContent = "Por favor, completa todos los campos.";
         mensaje.style.color = "red";
@@ -65,8 +67,7 @@
       mensaje.textContent = `¡Bienvenido/a, ${nombre}! Tu cuenta ha sido creada.`;
       mensaje.style.color = "green";
 
-      // Aquí podrías guardar datos en localStorage o enviarlos a un backend en el futuro
-      // localStorage.setItem("usuario", JSON.stringify({nombre, email}));
+     
     });
 
 // videos
