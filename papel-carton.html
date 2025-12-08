@@ -1,74 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Papel y Cartón | ArteXpres</title>
   <link rel="stylesheet" href="diseño.css">
 </head>
+
 <body>
-  <header>
-   
-    <nav>
-      <ul>
-        <li><a href="estructura.html">Inicio</a></li>
-        <li><a href="categoria.html">Categorías</a></li>
-        <li><a href="destacado.html">Proyectos</a></li>
-   
-        <li><a href="#" class="btn-login">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header>
+  <div class="logo-container">
+    <img src="createXpress.png" alt="Logo de createXpres" class="logo">
+  </div>
+    <button class="hamburger" id="hamburger">
+    ☰
+  </button>
+  
+  <nav>
+    <ul>
+      
+      <li><a href="estructura.html">Inicio</a></li>
+      <li><a href="categoria.html">Categoria</a></li>
+      <li><a href="destacado.html">Proyectos Destacados</a></li>
+      <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+      <li><a href="login.html" class="btn-login">Login</a></li>
+
+     
+    </ul>
+  </nav>
+</header>
+<main>
+  <h2>Categoria sobre papel y carton</h2>
 
   <section class="grid-proyectos">
-    <div class="proyecto">
-      <img src="corona de papel.png" alt="Flores de papel">
-       <a href="tutorial corona de papel.mp4" class="btn-categoria">Ver tutorial</a>
-       
-      <h3>Corona de papel</h3>
-      
+
+  <!-- Proyecto 1 -->
+  <div class="proyecto">
+    <img src="papelycartonimg1.png" alt="tamagochi de papel">
+    <a href="#" class="btn-categoria" onclick="abrirVideo1()">Ver tutorial</a>
+    <h3>Tamagoxhi de papel</h3>
+  </div>
+  <div id="modalVideo1" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo1()">&times;</span>
+      <video controls>
+        <source src="papelycarton1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
     </div>
-    <div class="proyecto">
-      <img src="origamidemurcielago.png" alt="Caja decorativa">
-      <h3>Organizador con cajas de cereal</h3>
-     
+  </div>
+
+  <!-- Proyecto 2 -->
+  <div class="proyecto">
+    <img src="papelycartonimg2.png" alt="flores de papel">
+    <a href="#" class="btn-categoria" onclick="abrirVideo2()">Ver tutorial</a>
+    <h3>Margaritas de papel</h3>
+  </div>
+  <div id="modalVideo2" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo2()">&times;</span>
+      <video controls>
+        <source src="papelycarton2.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
     </div>
-  </section>
+  </div>
+
+  <!-- Proyecto 3 -->
+  <div class="proyecto">
+    <img src="papelycartonimg3.png" alt="Caja decorativa">
+    <a href="#" class="btn-categoria" onclick="abrirVideo3()">Ver tutorial</a>
+    <h3>Estrellas de papel</h3>
+  </div>
+  <div id="modalVideo3" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo3()">&times;</span>
+      <video controls>
+        <source src="papelycarton3.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 4 -->
+  <div class="proyecto">
+    <img src="papelycartonimg4.png" alt="Manualidad 4">
+    <a href="#" class="btn-categoria" onclick="abrirVideo4()">Ver tutorial</a>
+    <h3>Corona de papel </h3>
+  </div>
+  <div id="modalVideo4" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo4()">&times;</span>
+      <video controls>
+        <source src="papelycarton4.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 5 -->
+  <div class="proyecto">
+    <img src="papelycartonimg5.png" alt="Manualidad 5">
+    <a href="#" class="btn-categoria" onclick="abrirVideo5()">Ver tutorial</a>
+    <h3>Tarjeta </h3>
+  </div>
+  <div id="modalVideo5" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo5()">&times;</span>
+      <video controls>
+        <source src="papelycarton5.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 6 -->
+  <div class="proyecto">
+    <img src="papelycartonimg6.png" alt="Manualidad 6">
+    <a href="#" class="btn-categoria" onclick="abrirVideo6()">Ver tutorial</a>
+    <h3>Flores de lavanda </h3>
+  </div>
+  <div id="modalVideo6" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo6()">&times;</span>
+      <video controls>
+        <source src="papelycarton6.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+</section>
+
+</main>
 
   <footer class="footer">
-  <div class="footer-contenido">
-    <div class="footer-col">
-      <h3>CreateXpres</h3>
-      <p>Tu comunidad de manualidades y creatividad. Inspírate, aprende y comparte tus creaciones.</p>
-     
+    <div class="footer-contenido">
+      <div class="footer-col">
+        <h3>CreateXpres</h3>
+        <p>Tu comunidad de manualidades y creatividad. Inspírate, aprende y comparte tus creaciones.</p>
+
+      </div>
+
+      <div class="footer-col">
+        <h4>Proyectos</h4>
+        <ul>
+
+          <li><a href="#">Por Categoría</a></li>
+          <li><a href="#">Destacado</a></li>
+
+        </ul>
+      </div>
+
+
+
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Términos de Uso</a></li>
+          <li><a href="#">Privacidad</a></li>
+
+        </ul>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h4>Proyectos</h4>
-      <ul>
-      
-        <li><a href="#">Por Categoría</a></li>
-         <li><a href="#">Destacado</a></li>
-      
-      </ul>
+    <div class="footer-copy">
+      <p>© 2025 CreateXpres. Todos los derechos reservados.</p>
     </div>
-
-    
-
-    <div class="footer-col">
-      <h4>Ayuda</h4>
-      <ul>
-        <li><a href="#">Centro de Ayuda</a></li>
-        <li><a href="#">Términos de Uso</a></li>
-        <li><a href="#">Privacidad</a></li>
-      
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-copy">
-    <p>© 2025 CreateXpres. Todos los derechos reservados.</p>
-  </div>
-</footer>
+  </footer>
+ <script src = "logica.js" ></script>
 </body>
+
 </html>

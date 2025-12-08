@@ -69,3 +69,24 @@
       // localStorage.setItem("usuario", JSON.stringify({nombre, email}));
     });
 
+// videos
+
+
+function abrirVideo1(){ document.getElementById("modalVideo1").style.display="flex"; }
+function cerrarVideo1(){ document.getElementById("modalVideo1").style.display="none"; }
+
+function abrirVideo2(){ document.getElementById("modalVideo2").style.display="flex"; }
+function cerrarVideo2(){ document.getElementById("modalVideo2").style.display="none"; }
+
+function abrirVideo3(){ document.getElementById("modalVideo3").style.display="flex"; }
+function cerrarVideo3(){ document.getElementById("modalVideo3").style.display="none"; }
+
+function abrirVideo4(){ document.getElementById("modalVideo4").style.display="flex"; }
+function cerrarVideo4(){ document.getElementById("modalVideo4").style.display="none"; }
+
+function abrirVideo5(){ document.getElementById("modalVideo5").style.display="flex"; }
+function cerrarVideo5(){ document.getElementById("modalVideo5").style.display="none"; }
+
+function abrirVideo6(){ document.getElementById("modalVideo6").style.display="flex"; }
+function cerrarVideo6(){ document.getElementById("modalVideo6").style.display="none"; }
+

@@ -28,48 +28,70 @@
     </ul>
   </nav>
 </header>
+<main>
+  <h2>Proyectos destacados de la semana </h2>
+  <h3>Mira cuales fueron los proyectos mas creativos y destacados de esta semana</h3>
 
 <!--SECCION DE PROYECTOS DESTACADOS-->
 
-<section class="destacados">
-  <div class="encabezado">
-    <h2>Proyectos Destacados</h2>
-    
+ <section class="grid-proyectos">
+  
+
+  <!-- Proyecto 1 -->
+  <div class="proyecto">
+    <img src="Corazones de lana.jpeg" alt="Corazones de lana ">
+    <a href="#" class="btn-categoria" onclick="abrirVideo1()">Ver tutorial</a>
+    <h3>Corazones de lana </h3>
   </div>
-  <p>Explora los proyectos más populares de nuestra comunidad esta semana.</p>
-
-
-  <div class="grid-proyectos">
-    <div class="proyecto">
-      <img src="Corazones de lana.jpeg" alt="Flores de papel coloridas">
-      <div class="contenido">
-        <a href="corazones con lana.mp4" class="btn-categoria">Ver tutorial</a>
-        <h3>Hermosa flor de loto  de papel</h3>
-     </div>   
-    </div>
-
-    <div class="proyecto">
-      <img src="Destacada3.png" alt="Pintura facil">
-      <div class="contenido">
-       <h3> Pintura creativa y facil</h3>
-       
-      </div>
-    </div>
-
-    <div class="proyecto">
-      <img src="Destacado2.png" alt="Marcador de libros">
-      <div class="contenido">
-        <h3>Marcador de libros tejido con diseño de mariposa </h3>
-       
-     
-      
-      </div>
+  <div id="modalVideo1" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo1()">&times;</span>
+      <video controls>
+        <source src="corazones con lana.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
     </div>
   </div>
+
+  <!-- Proyecto 2 -->
+  <div class="proyecto">
+    <img src="papelycartonimg2.png" alt="flores de papel">
+    <a href="#" class="btn-categoria" onclick="abrirVideo2()">Ver tutorial</a>
+    <h3>Margaritas de papel</h3>
+  </div>
+  <div id="modalVideo2" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo2()">&times;</span>
+      <video controls>
+        <source src="papelycarton2.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Proyecto 3 -->
+  <div class="proyecto">
+    <img src="papelycartonimg3.png" alt="Caja decorativa">
+    <a href="#" class="btn-categoria" onclick="abrirVideo3()">Ver tutorial</a>
+    <h3>Estrellas de papel</h3>
+  </div>
+  <div id="modalVideo3" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarVideo3()">&times;</span>
+      <video controls>
+        <source src="papelycarton3.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+
+
+  
+
 </section>
 
-
-
+</main>
 
 <footer class="footer">
   <div class="footer-contenido">
