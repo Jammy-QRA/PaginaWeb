@@ -1,19 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="diseño.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreateXpres</title>
+  <link rel="stylesheet" href="diseño.css">
 </head>
+<style>
+  @font-face {
+  font-family: 'FuenteEspecial';
+  src: url('fuentes/fuente2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'FuenteEspecial', sans-serif;
+  background-color: #DDD7D7; /* Light Silver */
+  color: #A89294; /* Grullo */
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: #A94564; /* Middle Red Purple */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(149, 78, 80, 0.3);
+}
+
+.logo-container img {
+  height: 60px;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #DDD7D7; /* Light Silver */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #B0C4CA; /* Pastel Blue */
+}
+
+.btn-login {
+  background-color: #954E50; /* Quinacridone Magenta */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #A94564; /* Middle Red Purple */
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #B0C4CA; /* Pastel Blue */
+}
+
+.hero .texto {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.hero .texto h1 {
+  font-size: 2.5rem;
+  color: #A94564; /* Middle Red Purple */
+  margin-bottom: 20px;
+}
+
+.hero .texto h3 {
+  font-size: 1.5rem;
+  color: #954E50; /* Quinacridone Magenta */
+}
+
+.hero .imagen {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.hero .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero .imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(149, 78, 80, 0.3);
+}
+
+/* Categorías */
+.categorias {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #DDD7D7; /* Light Silver */
+}
+
+.categorias h2 {
+  font-size: 2rem;
+  color: #954E50; /* Quinacridone Magenta */
+  margin-bottom: 15px;
+}
+
+.categorias p {
+  color: #A89294; /* Grullo */
+  margin-bottom: 30px;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.categoria {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(149, 78, 80, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-5px);
+}
+
+.categoria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.categoria .info {
+  padding: 15px;
+}
+
+.btn-categoria {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #954E50; /* Quinacridone Magenta */
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-categoria:hover {
+  background-color: #A94564; /* Middle Red Purple */
+}
+
+/* Destacados */
+.destacados {
+  padding: 40px 20px;
+  background-color: #B0C4CA; /* Pastel Blue */
+  text-align: center;
+}
+
+.destacados h2 {
+  color: #A94564; /* Middle Red Purple */
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.destacados p {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.proyecto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(149, 78, 80, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+}
+
+.proyecto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proyecto h3 {
+  color: #954E50; /* Quinacridone Magenta */
+  padding: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: #954E50; /* Quinacridone Magenta */
+  color: #DDD7D7; /* Light Silver */
+  padding: 30px 20px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #B0C4CA; /* Pastel Blue */
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #DDD7D7;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #A94564; /* Middle Red Purple */
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #B0C4CA;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .texto,
+  .hero .imagen {
+    flex: 1 1 100%;
+  }
+
+  .grid-categorias,
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
 <body>
-    <header>
+
+
+ <header>
   <div class="logo-container">
     <img src="createXpress.png" alt="Logo de createXpres" class="logo">
   </div>
-   <button class="hamburger" id="hamburger">
-    ☰
-  </button>
+    
   
   <nav>
     <ul>
@@ -28,7 +315,26 @@
     </ul>
   </nav>
 </header>
-<section class="categorias">
+
+  <main class = "hero">  
+    <div class="texto">
+      
+      <h1>Aprende y crea hermosas manualidades </h1>
+    
+      <h3>Unete a nuestra comunidad y aprende miles de manualidades en una hermosa comunidad que apoyara tu creatividad </h3>
+     
+     
+    
+    </div>
+    <div class="imagen">
+      <img src="descargar.jpg" alt="tarjeta de papel">
+      
+   
+    
+
+  </main>
+<!--SECCION DE CATEGORIAS-->
+  <section class="categorias">
   <h2>Explora por Categoría</h2>
   <p>Encuentra el tipo de manualidad que más te gusta</p>
   
@@ -63,6 +369,42 @@
 </div>
 </section>
 
+<!--SECCION DE PROYECTOS DESTACADOS-->
+
+<section class="destacados">
+  <div class="encabezado">
+    <h2>Proyectos Destacados</h2>
+    
+  </div>
+  <p>Explora los proyectos más populares de nuestra comunidad esta semana.</p>
+
+  <div class="grid-proyectos">
+    <div class="proyecto">
+      <img src="Flores de papel P.png" alt="Flores de papel coloridas">
+      <div class="contenido">
+        <h3>Hermosa flor de loto  de papel</h3>
+     </div>
+    </div>
+
+    <div class="proyecto">
+      <img src="Destacada3.png" alt="Pintura facil">
+      <div class="contenido">
+       <h3> Pintura creativa y facil</h3>
+       
+      </div>
+    </div>
+
+    <div class="proyecto">
+      <img src="Corazones de lana.jpeg" alt="Marcador de libros">
+      <div class="contenido">
+        <h3>Marcador de libros tejido con diseño de mariposa </h3>
+       
+     
+      
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -98,11 +440,10 @@
   </div>
 
   <div class="footer-copy">
-    <p>© 2025 CreateXpres. Todos los derechos reservados.</p>
+    <p>© CreateXpres. Todos los derechos reservados.</p>
   </div>
 </footer>
 <script src = "logica.js" ></script>
 
-    
 </body>
 </html>

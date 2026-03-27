@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="diseño.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías - CreateXpres</title>
+  <link rel="stylesheet" href="categorias.css">
 </head>
 <style>
-
-   @font-face {
+     @font-face {
   font-family: 'FuenteEspecial';
   src: url('fuentes/fuente2.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 
 }
- /* Paleta aplicada */
+   /* Paleta aplicada */
 :root {
   --grullo: #A89294;
   --light-silver: #DDD7D7;
@@ -59,7 +58,6 @@ header {
   height: 60px;
 }
 
-/* Navegación */
 nav ul {
   list-style: none;
   display: flex;
@@ -89,130 +87,73 @@ nav a:hover {
   background-color: var(--middle-red-purple);
 }
 
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Main */
-main {
+/* Sección Categorías */
+.categorias {
   padding: 40px 20px;
   text-align: center;
+  background-color: var(--pastel-blue);
 }
 
-main h2 {
+.categorias h2 {
   font-size: 2rem;
   color: var(--middle-red-purple);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-main h3 {
-  font-size: 1.2rem;
+.categorias p {
   color: var(--quinacridone-magenta);
   margin-bottom: 30px;
 }
 
-/* Grid de proyectos */
-.grid-proyectos {
+.grid-categorias {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.proyecto {
+.categoria {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(149, 78, 80, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease;
-  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyecto:hover {
+.categoria:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(149, 78, 80, 0.3);
 }
 
-.proyecto img {
+.categoria img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.proyecto h3 {
-  color: var(--middle-red-purple);
+.categoria .info {
   padding: 15px;
+}
+
+.categoria h3 {
+  color: var(--middle-red-purple);
+  margin-bottom: 10px;
 }
 
 .btn-categoria {
   display: inline-block;
-  background-color: var(--pastel-blue);
+  background-color: var(--quinacridone-magenta);
   color: #fff;
   padding: 8px 14px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  margin: 10px 0;
 }
 
 .btn-categoria:hover {
-  background-color: var(--quinacridone-magenta);
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(221, 215, 215, 0.95); /* Light Silver translúcido */
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  padding: 20px;
-}
-
-.modal-contenido {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(149, 78, 80, 0.3);
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  animation: fadeIn 0.4s ease;
-}
-
-.modal video {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.cerrar {
-  float: right;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--quinacridone-magenta);
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.cerrar:hover {
-  color: var(--pastel-blue);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  background-color: var(--middle-red-purple);
 }
 
 /* Footer */
@@ -261,39 +202,29 @@ main h3 {
 /* Responsivo */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
     flex-direction: column;
     gap: 15px;
-    background-color: var(--middle-red-purple);
-    padding: 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 70px;
-    right: 20px;
   }
 
-  nav ul.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .grid-proyectos {
+  .grid-categorias {
     grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
+
+
 </style>
 <body>
-    <header>
+     <header>
   <div class="logo-container">
     <img src="createXpress.png" alt="Logo de createXpres" class="logo">
   </div>
-    <button class="hamburger" id="hamburger">
-    ☰
-  </button>
+    
   
   <nav>
     <ul>
@@ -308,71 +239,38 @@ main h3 {
     </ul>
   </nav>
 </header>
-<main>
-  <h2>Proyectos destacados de la semana </h2>
-  <h3>Mira cuales fueron los proyectos mas creativos y destacados de esta semana</h3>
 
-<!--SECCION DE PROYECTOS DESTACADOS-->
+<section class="categorias">
+  <h2>Explora por Categoría</h2>
+  <p>Encuentra el tipo de manualidad que más te gusta</p>
 
- <section class="grid-proyectos">
-  
-
-  <!-- Proyecto 1 -->
-  <div class="proyecto">
-    <img src="Corazones de lana.jpeg" alt="Corazones de lana ">
-    <a href="#" class="btn-categoria" onclick="abrirVideo1()">Ver tutorial</a>
-    <h3>Corazones de lana </h3>
-  </div>
-  <div id="modalVideo1" class="modal">
-    <div class="modal-contenido">
-      <span class="cerrar" onclick="cerrarVideo1()">&times;</span>
-      <video controls>
-        <source src="corazones con lana.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+  <div class="grid-categorias">
+    <div class="categoria">
+      <img src="papelycartonimg1.png" alt="Flores de papel coloridas">
+      <div class="info">
+        <h3>Papel y Cartón</h3>
+        <a href="papel-carton.html" class="btn-categoria">Ver proyectos</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Proyecto 2 -->
-  <div class="proyecto">
-    <img src="papelycartonimg2.png" alt="flores de papel">
-    <a href="#" class="btn-categoria" onclick="abrirVideo2()">Ver tutorial</a>
-    <h3>Margaritas de papel</h3>
-  </div>
-  <div id="modalVideo2" class="modal">
-    <div class="modal-contenido">
-      <span class="cerrar" onclick="cerrarVideo2()">&times;</span>
-      <video controls>
-        <source src="papelycarton2.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+    <div class="categoria">
+      <img src="pintura1img.png" alt="Mesa de arte con pinturas y pinceles">
+      <div class="info">
+        <h3>Pintura</h3>
+        <a href="pintura.html" class="btn-categoria">Ver proyectos</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Proyecto 3 -->
-  <div class="proyecto">
-    <img src="pintura2img.png" alt="Caja decorativa">
-    <a href="#" class="btn-categoria" onclick="abrirVideo3()">Ver tutorial</a>
-    <h3>Tecnica facil para pintar flores </h3>
-  </div>
-  <div id="modalVideo3" class="modal">
-    <div class="modal-contenido">
-      <span class="cerrar" onclick="cerrarVideo3()">&times;</span>
-      <video controls>
-        <source src="pintura2.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+    <div class="categoria">
+      <img src="costura1img.png" alt="Patrón de tejido">
+      <div class="info">
+        <h3>Costura y Tejido</h3>
+        <a href="costura-tejido.html" class="btn-categoria">Ver proyectos</a>
+      </div>
     </div>
+
   </div>
-
-
-
-  
-
 </section>
-
-</main>
-
 <footer class="footer">
   <div class="footer-contenido">
     <div class="footer-col">
@@ -405,11 +303,8 @@ main h3 {
   </div>
 
   <div class="footer-copy">
-    <p>© 2025 CreateXpres. Todos los derechos reservados.</p>
+    <p>© CreateXpres. Todos los derechos reservados.</p>
   </div>
 </footer>
-<script src = "logica.js" ></script>
-
-    
 </body>
 </html>

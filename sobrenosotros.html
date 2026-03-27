@@ -6,7 +6,248 @@
   <title>Sobre Nosotros - CreateXpres</title>
   <link rel="stylesheet" href="diseño.css">
 </head>
+<style>
+    @font-face {
+  font-family: 'FuenteEspecial';
+  src: url('fuentes/fuente2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+  /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'FuenteEspecial', sans-serif;
+  background-color: #DDD7D7; /* Light Silver */
+  color: #A89294; /* Grullo */
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: #A94564; /* Middle Red Purple */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(149, 78, 80, 0.3);
+}
+
+.logo-container img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #DDD7D7; /* Light Silver */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #B0C4CA; /* Pastel Blue */
+}
+
+.btn-login {
+  background-color: #954E50; /* Quinacridone Magenta */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #A94564; /* Middle Red Purple */
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+  padding: 40px 20px;
+  background-color: #B0C4CA; /* Pastel Blue */
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(149, 78, 80, 0.2);
+}
+
+.sobre-nosotros h2 {
+  font-size: 2rem;
+  color: #A94564; /* Middle Red Purple */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sobre-nosotros p {
+  font-size: 1.1rem;
+  color: #954E50; /* Quinacridone Magenta */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(149, 78, 80, 0.1);
+  padding: 20px;
+}
+
+.card h3, .card h4 {
+  color: #A94564;
+  margin-bottom: 10px;
+}
+
+.card p, .card ul {
+  color: #A89294;
+  font-size: 0.95rem;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Valores */
+.valores h3 {
+  text-align: center;
+  color: #954E50;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  color: #A89294;
+  margin-bottom: 15px;
+}
+
+.cta .btn-login {
+  background-color: #954E50;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.cta .btn-login:hover {
+  background-color: #A94564;
+}
+
+/* Footer */
+.footer {
+  background-color: #954E50; /* Quinacridone Magenta */
+  color: #DDD7D7; /* Light Silver */
+  padding: 30px 20px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #B0C4CA; /* Pastel Blue */
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #DDD7D7;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #A94564;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #B0C4CA;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #A94564;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
 <body>
+
 
   <!-- Header -->
   <header>
